@@ -5,13 +5,8 @@ Présenté par Maria Velichie
 ## Sommaire
 
 1. [Introduction](#1-introduction)
-2. [Liste des compétences couvertes par le projet](#2-liste-des-compétences-couvertes-par-le-projet)
-3. [Résumé du projet](#3-résumé-du-projet)
-4. [Cahier des charges](#4-cahier-des-charges)
-5. [Conception et codage des composants front-end](#5-conception-et-codage-des-composants-front-end)
-6. [Présentation des éléments les plus significatifs du projet](#6-présentation-des-éléments-les-plus-significatifs-du-projet)
-7. [Présentation d’un exemple de recherche effectuée à partir de site anglophone](#7-présentation-dun-exemple-de-recherche-effectuée-à-partir-de-site-anglophone)
-8. [Synthèse et conclusion](#8-synthèse-et-conclusion)
+2. [Résumé du projet](#3-résumé-du-projet)
+
 
 ## 1. Introduction
 
