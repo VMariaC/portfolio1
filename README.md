@@ -5,7 +5,7 @@ Présenté par Maria Velichie
 ## Sommaire
 
 1. [Introduction](#1-introduction)
-2. [Résumé du projet](#3-résumé-du-projet)
+2. [Résumé du projet](#2-résumé-du-projet)
 
 
 ## 1. Introduction
@@ -15,6 +15,7 @@ Notre entreprise, fondée en 2023, se distingue par sa composition unique : une 
 nous avons établi notre réputation en tant que fournisseur de solutions créatives et efficaces dans plusieurs domaines clés.
 ##Projet réalisé dans le cadre de la présentation au Titre Professionnel Développeur Web et Web Mobile présenté par Maria Velichie
 
+## 2.  Résumé du projet
 Le projet de notre entreprise, fondée en 2023, se distingue par son équipe composée de jeunes développeurs novices et expérimentés. 
 Nous excellons dans divers domaines tels que le développement web, le graphisme, l'intelligence artificielle et le design. 
 Notre objectif est de fournir des solutions créatives et innovantes à nos clients, adaptées à leurs besoins spécifiques. Nous nous engageons à concevoir des sites web sur mesure, 
