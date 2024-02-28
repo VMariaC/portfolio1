@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <link rel="stylesheet" href="style.css" >
+  <script src="script.js"></script>
+  <!-- Autres balises meta et styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>Portfolio Entreprise</title>
+</head>
+<body>
+  <nav>
+    <div class="profile">
+      <img src="image/logo.jpg" alt="profile photo" >
+      <h1>Acceuil</h1>
+    </div>
+    <ul>
+      <li> <a href="index.html">Acceuil</a></li>
+      <li><a href="abaout.html">Présentation</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <section class="presentation-image">
+            <h2>Hey, bienvenue sur mon site</h2>
+    </section>
+    <div class="presentation">
+    <p>
+      Je m'appelle Maria et je suis Développeur design depuis Septembre 2023, formée dans le cadre de Centre European de Formation.
+      Mon entreprise date depuis Novembre 2023. Dans mon entreprise, nous sommes une équipe de 7 personnes. Chacun d'entre nous joue un rôle important.
+    </p>
+    </div>
+    <div class="btn">
+      <img src="image/top.png" alt="" class="icon">
+    </div>
+  </header>
+
+  <section class="projects-section">
+
+    <h2>Parcours</h2>
+    <div class="projects">
+        <h4>Développeur Front-end</h4>
+        <p class="description">
+          <ul>
+            <li>Conception et développement d'interfaces utilisateur interactives et réactives en utilisant HTML, CSS et JavaScript.</li>
+            <li>Collaboration avec les équipes de conception pour transformer des maquettes en produits fonctionnels.</li>
+            <li>Optimisation des performances et de l'accessibilité des sites web pour une meilleure expérience utilisateur.</li>
+          </ul> 
+        <p class="dates">Septembre 2023</p>
+      </div>
+	  <div class="project">
+		<h4>Compétences en développement  </h4>
+		<ul class="description">
+			<li>Langages : HTML, CSS, JavaScript, TypeScript, Python, Java.</li>
+			<li>Frameworks : React.js, Vue.js, Angular, Node.js, Express.js.</li>
+			<li>utils de versionnement : Git, GitHub, GitLab.</li>
+			<li>Maîtrise des normes et bonnes pratiques en matière de développement web.</li>
+      </ul>
+		<p class="dates"> Septembre 2023</p>
+	</div>
+	<div class="project">
+		<h4>Compétences en design</h4>
+		<ul class="description">
+    
+			<li>Conception d'interfaces utilisateur (UI) intuitives et esthétiques.</li>
+			<li>Utilisation d'outils de conception graphique tels que Adobe Photoshop, Adobe XD, Figma.</li>
+			<li>Sensibilité artistique pour choisir les bonnes couleurs, polices et mises en page.</li>
+    </ul>
+		<p class="dates"> Formation 2023 </p>
+	</div>
+	<div class="project">
+		<h4>Intérêts professionnels </h4>
+		<p class="description">
+      <ul>
+			<li>Collaborer avec des équipes multidisciplinaires pour créer des solutions innovantes et de haute qualité.</li>
+			<li>Explorer de nouvelles technologies et les intégrer dans mes projets pour rester à jour.</li>
+    </ul>
+	</div>
+	<div class="creation" data-modal="modal1">
+		<h3>Exemple site</h3>
+    <img src="image/web.jpg" alt="Création 1" style="width:200px;height:200px;">
+    <button onclick="openModal('modal2')">Voir plus</button>
+    <ul>
+		  <li> Voici un site cree pour une entreprise de designer interieur.</li>
+		  <li> Le design est minimaliste et actuelle.</li>
+    </ul>
+  </div>
+  <div id="modal1" class="modal">
+   
+        <img class="modal-img" src="image/web.jpg" alt="Création 1">
+        <ul>
+          <li> Voici un site cree pour une entreprise de maquillage.</li>
+          <li> Le design est minimaliste et actuelle.</li>
+        </ul>
+</div>
+
+<div class="creation" data-modal="modal1">
+  <h3>Exemple site</h3>
+  <img src="image/site.jpg" alt="Création 2" style="width:200px;height:200px;">
+  <button onclick="openModal('modal2')">Voir plus</button>
+  <ul>
+    <li> Voici un site cree pour une entreprise de maquillage.</li>
+    <li> Le design est minimaliste et actuelle.</li>
+  </ul>
+</div>
+<div id="modal2" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal('modal1')">&times;</span>
+      <img class="modal-img" src="image/site.jpg" alt="Création 2">
+    <ul>
+        <li> Voici un site cree pour une entreprise de maquillage.</li>
+        <li> Le design est minimaliste et actuelle.</li>
+      </ul>
+
+  </div>
+</div>
+  </section>
+
+  <footer>
+	<div id="social-icons">
+		<a href="https://github.com/votre-compte-github" target="_blank" rel="noopener noreferrer">
+		  <i class="fab fa-github"></i>
+		</a>
+		<a href="https://www.linkedin.com/in/votre-profil-linkedin" target="_blank" rel="noopener noreferrer">
+		  <i class="fab fa-linkedin"></i>
+		</a>
+	  </div>
+	  <p id="last-updated"></p>
+  </footer>
+
+  <script src="script.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+		<script>
+      new Vue({
+        el: '#app',
+        methods: {
+          scrollToTop() {
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+          }
+        }
+      });
+      </script>
+
+			<script>
+			// Récupérer l'élément où afficher la date de dernière mise à jour
+			var lastUpdatedElement = document.getElementById('last-updated');
+			
+			// Créer un objet Date pour la date actuelle
+			var currentDate = new Date();
+			
+			// Formater la date actuelle
+			var formattedDate = currentDate.toLocaleDateString('fr-FR', {
+			  year: 'numeric',
+			  month: 'long',
+			  day: 'numeric'
+			});
+			
+			// Mettre à jour le contenu de l'élément avec la date formatée
+			lastUpdatedElement.textContent = 'Dernière mise à jour : ' + formattedDate;
+		  // Ajouter un gestionnaire d'événements à chaque élément de création
+document.querySelectorAll('.creation').forEach(function(creation) {
+  creation.addEventListener('click', function() {
+    var modalId = this.getAttribute('data-modal');
+    var modal = document.getElementById(modalId);
+    modal.style.display = 'block'; // Afficher la modal correspondante
+  });
+});
+
+// Gestion de la fermeture de la modal
+document.querySelectorAll('.close').forEach(function(closeBtn) {
+  closeBtn.addEventListener('click', function() {
+    var modal = this.parentElement.parentElement;
+    modal.style.display = 'none'; // Cacher la modal
+  });
+});
+
+</script>
+<script>
+  function openModal(id) {
+      document.getElementById(id).style.display = "block";
+  }
+
+  function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+  }
+</script>
+<script>
+  const btn = document.querySelector ('.btn');
+  btn.addEventListener('click', () => {
+
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behaivor: "smooth"   
+    })
+  })
+</script>
+</body>
+</html>

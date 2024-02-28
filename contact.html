@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <link rel="stylesheet" href="style.css" >
+  <script src="script.js"></script>
+  <!-- Autres balises meta et styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>Portfolio Entreprise</title>
+</head>
+<body>
+  <nav>
+    <div class="profile">
+        <img src="image/logo.jpg" alt="profile photo" >
+      <h1>Formulaire contact</h1>
+    </div>
+    <ul>
+      <li><a href="index.html">Acceuil</a></li>
+      <li><a href="abaout.html">Présentation</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <div class="btn">
+        <img src="image/top.png" alt="" class="icon">
+      </div>
+  </header>
+
+  <div>
+    <form @submit.prevent="handleSubmit">
+      <label for="firstname">Prénom :</label>
+      <input type="text" id="firstname" v-model="firstname" required><br><br>
+
+      <label for="lastname">Nom :</label>
+      <input type="text" id="lastname" v-model="lastname" required><br><br>
+
+      <label for="subject">Objet :</label>
+      <input type="text" id="subject" v-model="subject" required><br><br>
+
+      <label for="message">Message :</label>
+      <textarea id="message" v-model="message" rows="4" required></textarea><br><br>
+
+      <button type="submit">Envoyer</button>
+    </form>
+  </div>
+
+  <footer>
+	<div id="social-icons">
+		<a href="https://github.com/votre-compte-github" target="_blank" rel="noopener noreferrer">
+		  <i class="fab fa-github"></i>
+		</a>
+		<a href="https://www.linkedin.com/in/votre-profil-linkedin" target="_blank" rel="noopener noreferrer">
+		  <i class="fab fa-linkedin"></i>
+		</a>
+	  </div>
+	  <p id="last-updated"></p>
+  </footer>
+
+  <script src="script.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+       <script>
+        // Récupérer l'élément où afficher la date de dernière mise à jour
+					var lastUpdatedElement = document.getElementById('last-updated');
+					
+					// Créer un objet Date pour la date actuelle
+					var currentDate = new Date();
+					
+					// Formater la date actuelle
+					var formattedDate = currentDate.toLocaleDateString('fr-FR', {
+					  year: 'numeric',
+					  month: 'long',
+					  day: 'numeric'
+					});
+					
+					// Mettre à jour le contenu de l'élément avec la date formatée
+					lastUpdatedElement.textContent = 'Dernière mise à jour : ' + formattedDate;
+				
+		  // Ajouter un gestionnaire d'événements à chaque élément de création
+		document.querySelectorAll('.creation').forEach(function(creation) {
+		  creation.addEventListener('click', function() {
+			var modalId = this.getAttribute('data-modal');
+			var modal = document.getElementById(modalId);
+			modal.style.display = 'block'; // Afficher la modal correspondante
+		  });
+		});
+		</script>
+        <script>
+            export default {
+              data() {
+                return {
+                  firstname: '',
+                  lastname: '',
+                  subject: '',
+                  message: ''
+                };
+              },
+              methods: {
+                async handleSubmit() {
+                  try {
+                    const response = await fetch('/send_email', {
+                      method: 'POST',
+                      headers: {
+                        'Content-Type': 'application/json'
+                      },
+                      body: JSON.stringify({
+                        firstname: this.firstname,
+                        lastname: this.lastname,
+                        subject: this.subject,
+                        message: this.message
+                      })
+                    });
+            
+                    if (response.ok) {
+                      // Email envoyé avec succès
+                      console.log('Email envoyé avec succès');
+                      // Réinitialiser les champs du formulaire
+                      this.firstname = '';
+                      this.lastname = '';
+                      this.subject = '';
+                      this.message = '';
+                    } else {
+                      // Erreur lors de l'envoi de l'email
+                      console.error('Une erreur s\'est produite lors de l\'envoi de l\'email');
+                    }
+                  } catch (error) {
+                    console.error('Une erreur s\'est produite :', error);
+                  }
+                }
+              }
+            };
+            </script>
+            <script>
+                const btn = document.querySelector ('.btn');
+                btn.addEventListener('click', () => {
+              
+                  window.scrollTo({
+                    top: 0,
+                    left: 0,
+                    behaivor: "smooth"   
+                  })
+                })
+              </script>
+            
+          
+</body>
+</html>
